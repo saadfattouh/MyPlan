@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MyPlan</string>
+    <string name="email_and_password_required">email and password are required</string>
+    <string name="type_missing_message">user type is required</string>
+    <string name="professor_email_suffex">se.yu.es.ty</string>
+    <string name="student_email_suffex">ed@str</string>
+    <string name="please_provide_a_professor_email">provide a valid professor email first</string>
+    <string name="please_provide_a_valid_student_email">provide a valid student email!</string>
+
+    <string name="hint_user_name">User name</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="user_and_password_required">user name and password must not be empty!</string>
+    <string name="hint_name">full name</string>
+    <string name="register">Register</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_email">Email</string>
+    <string name="student">Student</string>
+    <string name="professor">Professor</string>
+    <string name="choose_subject">Select your subject</string>
+
+    <string name="missing_fields_message">Please fill all fields</string>
+    <string name="Subjects">Subjects</string>
+    <string name="Todo">Todo list</string>
+    <string name="see_all">see all</string>
+
+    <string name="confirmation_dialog">Delete confirmation dialog :</string>
+    <string name="are_you_sure_you_want_to_delete">Are you sure you want to delete this task from list ?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="add_new_note">New Task</string>
+    <string name="details">Details</string>
+
+</resources>
