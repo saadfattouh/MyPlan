@@ -27,6 +27,8 @@ public class ChooseSubject extends AppCompatActivity {
         mToolBar = findViewById(R.id.toolbar);
         mSubjectsList = findViewById(R.id.rv);
 
+        mToolBar.setTitle("subjects (experimental names)");
+
         setSupportActionBar(mToolBar);
 
         subjects = new ArrayList<Subject>()

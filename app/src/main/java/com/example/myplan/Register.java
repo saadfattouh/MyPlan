@@ -51,7 +51,7 @@ public class Register extends AppCompatActivity {
         });
 
         mRegisterBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, ChooseSubject.class));
+            startActivity(new Intent(this, MainActivity.class));
 //            if(Validation.validateInput(this, mNameET, mPassET, mEmailET, mPhone))
 //                register();
         });
