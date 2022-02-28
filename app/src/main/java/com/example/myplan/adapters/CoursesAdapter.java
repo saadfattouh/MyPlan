@@ -11,31 +11,31 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.example.myplan.MainActivity;
+import com.example.myplan.CoursesActivity;
 import com.example.myplan.R;
-import com.example.myplan.SubjectActivity;
-import com.example.myplan.model.Subject;
+import com.example.myplan.CourseActivity;
+import com.example.myplan.model.Course;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubjectsAdapter extends RecyclerView.Adapter<SubjectsAdapter.ViewHolder> {
+public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHolder> {
 
 
     Context context;
-    private List<Subject> depts;
+    private List<Course> courses;
 
     // RecyclerView recyclerView;
-    public SubjectsAdapter(Context context, ArrayList<Subject> depts) {
+    public CoursesAdapter(Context context, ArrayList<Course> courses) {
         this.context = context;
-        this.depts = depts;
+        this.courses = courses;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem = layoutInflater.inflate(R.layout.subject_item, parent, false);
+        View listItem = layoutInflater.inflate(R.layout.item_course, parent, false);
         ViewHolder viewHolder = new ViewHolder(listItem);
 
         return viewHolder;
@@ -45,12 +45,15 @@ public class SubjectsAdapter extends RecyclerView.Adapter<SubjectsAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Subject dept = depts.get(position);
+        Course course = courses.get(position);
 
-        holder.dept.setText(dept.getSubjectName());
+        holder.course_name.setText(course.getCourseName());
 
-        holder.dept.setOnClickListener(v -> {
-            context.startActivity(new Intent(context, SubjectActivity.class));
+        holder.course_name.setOnClickListener(v -> {
+            Intent courseDetails = new Intent(context, CourseActivity.class);
+            courseDetails.putExtra("course_id", course.getId());
+            courseDetails.putExtra("name", course.getCourseName());
+            context.startActivity(courseDetails);
         });
 
 
@@ -59,17 +62,17 @@ public class SubjectsAdapter extends RecyclerView.Adapter<SubjectsAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return depts.size();
+        return courses.size();
     }
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public Button dept;
+        public Button course_name;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.dept = itemView.findViewById(R.id.dept);
+            this.course_name = itemView.findViewById(R.id.dept);
         }
     }
 

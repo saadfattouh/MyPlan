@@ -19,7 +19,6 @@ import com.example.myplan.api.Urls;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 public class Login extends AppCompatActivity {
 
     private Button mLoginBtn;
@@ -33,7 +32,6 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         //bind to views
         mEmailET = findViewById(R.id.email);
@@ -50,29 +48,29 @@ public class Login extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                startActivity(new Intent(Login.this, MainActivity.class));
 
 //                mLoginBtn.setEnabled(false);
 
-//                //validation
-//                String email = mEmailET.getText().toString().trim();
-//                String password = mPassET.getText().toString().trim();
-//                // Check for empty data in the form
-//                if (!email.isEmpty() && !password.isEmpty()) {
-//                    if(!email.contains(getResources().getString(R.string.student_email_suffex))){
-//                        Toast.makeText(Login.this, getResources().getString(R.string.please_provide_a_valid_student_email), Toast.LENGTH_SHORT).show();
-//                        mLoginBtn.setEnabled(true);
-//                    }else {
-//                        //this is a student with valid student email
+                //validation
+                String email = mEmailET.getText().toString().trim();
+                String password = mPassET.getText().toString().trim();
+                // Check for empty data in the form
+                if (!email.isEmpty() && !password.isEmpty()) {
+                    if(!email.contains(getResources().getString(R.string.student_email_suffex))){
+                        Toast.makeText(Login.this, getResources().getString(R.string.please_provide_a_valid_student_email), Toast.LENGTH_SHORT).show();
+                        mLoginBtn.setEnabled(true);
+                    }else {
+                        //this is a student with valid student email
+                        startActivity(new Intent(Login.this, MainActivity.class));
 //                        login(email, password);
-//                    }
-//
-//                } else {
-//                    // Prompt user to enter credentials
-//                    Toast.makeText(getApplicationContext(),
-//                            getResources().getString(R.string.email_and_password_required), Toast.LENGTH_LONG)
-//                            .show();
-//                }
+                    }
+
+                } else {
+                    // Prompt user to enter credentials
+                    Toast.makeText(getApplicationContext(),
+                            getResources().getString(R.string.email_and_password_required), Toast.LENGTH_LONG)
+                            .show();
+                }
             }
         });
 

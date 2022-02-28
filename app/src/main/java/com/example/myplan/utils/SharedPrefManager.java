@@ -85,6 +85,16 @@ public class SharedPrefManager {
     }
 
 
+    public void setLectureProgress(String lectureKey, float progress) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putFloat(lectureKey, progress);
+        editor.apply();
+    }
 
+    public float getLectureProgress(String lectureKey) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getFloat(lectureKey, -1);
+    }
 
 }

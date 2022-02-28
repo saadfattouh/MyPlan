@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/btn_login_bg"
-        android:textColor="@color/btn_login"
+        android:background="@drawable/bg_subject_item"
+        android:textColor="@color/white"
         android:text="information technology"/>
 
 </RelativeLayout>

@@ -33,5 +33,16 @@
     <string name="no">no</string>
     <string name="add_new_note">New Task</string>
     <string name="details">Details</string>
+    <string name="welcome_to_my_plan">Welcome to my plan</string>
+    <string name="my_tasks">My tasks</string>
+    <string name="courses">Courses</string>
+    <string name="my_reports">My reports</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="lecturers">Lecturers</string>
+    <string name="slider_desc">progress</string>
+    <string name="quiz">Quiz</string>
+    <string name="bookmarked">set progress</string>
+    <string name="screenshot">Screenshot</string>
+    <string name="submit_answers">Submit</string>
 
 </resources>

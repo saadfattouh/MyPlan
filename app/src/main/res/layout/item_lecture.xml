@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    android:layout_margin="8dp"
+    android:background="@drawable/bg_lecture_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <LinearLayout
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_weight="9">
+       <TextView
+           android:id="@+id/name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textSize="16sp"
+           android:text="lecture 1"
+           android:textStyle="bold"
+           android:padding="8dp" />
+
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:clickable="false"
+           android:contextClickable="false">
+           <com.google.android.material.slider.Slider
+               android:id="@+id/progress"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="10dp"
+               app:trackHeight="16dp"
+               app:thumbElevation="0dp"
+               android:contentDescription="@string/slider_desc"
+               app:trackColorInactive="#39006DCC"
+               app:trackColorActive="#0074CC"
+               app:thumbRadius="0dp"
+               android:enabled="false"
+               android:value=".6"
+               android:valueFrom="0.0"
+               android:valueTo="1.0" />
+       </FrameLayout>
+
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            android:src="@drawable/ic_forward"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

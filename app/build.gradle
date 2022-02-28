@@ -37,6 +37,9 @@ dependencies {
 
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
 
+    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+    implementation 'com.github.kk121:File-Loader:1.6'
+
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
 

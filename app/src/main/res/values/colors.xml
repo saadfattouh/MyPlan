@@ -9,7 +9,11 @@
     <color name="bg_register">#2e3237</color>
     <color name="bg_main">#428bca</color>
     <color name="white">#ffffff</color>
+    <color name="white_600">#75FFFFFF</color>
     <color name="black">#000000</color>
+
+    <color name="bg_main_2">#eff1f8</color>
+
 
     <!--    all activities background-->
     <color name="app_bg">#ffffff</color>

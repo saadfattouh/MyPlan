@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,8 +50,8 @@ public class Register extends AppCompatActivity {
         });
 
         mRegisterBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
-//            if(Validation.validateInput(this, mNameET, mPassET, mEmailET, mPhone))
+            if(Validation.validateInput(this, mNameET, mPassET, mEmailET, mPhone))
+                startActivity(new Intent(this, MainActivity.class));
 //                register();
         });
 
